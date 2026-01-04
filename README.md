@@ -55,3 +55,4 @@ Essas bibliotecas já vêm no repositório (não precisam instalar via npm):
 - Swiper
 - Material Design Icons
 - Remix Icon
+Mas qualquer coisa rodar o npm install
