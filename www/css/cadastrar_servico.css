@@ -1,0 +1,240 @@
+/* --- Cores e Variáveis Específicas para esta tela --- */
+:root {
+    --header-height: 80px; /* Altura da seção amarela no topo */
+    --solucione-yellow: #ffc107;
+    --solucione-green: #38a538;
+    --branco: #ffffff;
+    --gelo: #f1f1f1;
+    --verde: #19c463;
+    --preto: #2a2a2a;
+    --amarelo: #FED03E;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* Posição dos links de ícone no cabeçalho */
+.header-curve-servico .link {
+    position: absolute; /* Mantém a posição absoluta para os botões */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-40%); /* Ajuste fino para o centro exato */
+    color: var(--preto); 
+    font-size: 1.5rem;
+    z-index: 10;
+    /* Adicione padding para facilitar o clique, se necessário */
+    padding: 20px; 
+}
+
+.header-curve-servico .back-link { left: 20px; } /* Ajusta a margem da esquerda */
+.header-curve-servico .notifications-link { right: 50px; } /* Ajusta a margem da direita */
+.header-curve-servico .panel-open { right: 10px; } /* Ajusta a margem da direita */
+
+/* Estilo para o novo título da página no cabeçalho */
+.page-header-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    margin: 0; /* Remove a margem padrão */
+    text-align: center; /* Garante que o título esteja centralizado */
+}
+
+
+/* 2. Ajustes nos Ícones de Serviço (Pequenos de Adicionar/Remover) */
+.service-add-icon {
+    position: absolute;
+    bottom: -8px; /* Ajustado para ficar um pouco mais para dentro */
+    right: -8px; /* Ajustado para ficar um pouco mais para dentro */
+    font-size: 0.9rem; /* Levemente menor */
+    padding: 4px; /* Aumenta um pouco o padding para o círculo */
+    border-radius: 50%;
+    background-color: var(--verde);
+    color: var(--branco);
+    line-height: 1; /* Garante que o ícone fique centralizado no círculo */
+    display: flex; /* Adicionado para centralizar o '+' */
+    justify-content: center; /* Centraliza horizontalmente o '+' */
+    align-items: center; /* Centraliza verticalmente o '+' */
+    width: 24px; /* Largura e altura explícitas para o círculo */
+    height: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma pequena sombra para destaque */
+}
+
+.service-remove-icon {
+    position: absolute;
+    bottom: -8px; /* Ajustado para ficar um pouco mais para dentro */
+    right: -8px; /* Ajustado para ficar um pouco mais para dentro */
+    font-size: 0.9rem; /* Levemente menor */
+    padding: 4px; /* Aumenta um pouco o padding para o círculo */
+    border-radius: 50%;
+    background-color: var(--branco);
+    color: var(--solucione-red);
+    line-height: 1; /* Garante que o ícone fique centralizado no círculo */
+    display: flex; /* Adicionado para centralizar o 'x' */
+    justify-content: center; /* Centraliza horizontalmente o 'x' */
+    align-items: center; /* Centraliza verticalmente o 'x' */
+    width: 24px; /* Largura e altura explícitas para o círculo */
+    height: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma pequena sombra para destaque */
+}
+
+.page-content {
+    padding-bottom: 90px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Estilo para o botão de Acesso */
+.button-green {
+    background-color: var(--solucione-green);
+    color: #fff !important;
+    font-weight: bold;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+}
+
+.button-yellow {
+    background-color: var(--solucione-yellow);
+    color: #000 !important;
+    font-weight: bold;
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+}
+
+/* --- Estrutura do Cabeçalho Curvo --- */
+.header-curve-servico {
+    position: relative;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--solucione-yellow);
+    
+    /* Centraliza o conteúdo (logo e título) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px; /* Espaço para o topo */
+}
+
+.header-curve-servico .back-link {
+    position: absolute;
+    /* top: 40px; */
+    left: 20px;
+    color: #000; /* Cor preta para o ícone da seta */
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0 0 0;
+}
+
+.form-section {
+    width: 100%;
+    /* margin-top: 40px; /* Puxa o formulário para dentro da curva amarela */
+    max-width: 350px;
+    padding: 0 22px;
+    z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    margin-block-end: 20px;
+}
+/* Estilos para a barra de ferramentas */
+.toolbar {
+    height: 80px;
+    /* Garante que o toolbar fique fixo na parte inferior */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100; /* Garante que fique acima de outros elementos */
+}
+
+.toolbar-inner {
+    background-color: var(--branco);
+    border-top: 1px solid var(--gelo);
+    height: 100%; /* Ocupa toda a altura do toolbar (80px) */
+    display: flex; /* Já está no HTML, mas é bom reforçar */
+}
+
+/* Estilos para cada item do menu (link) */
+.toolbar-inner .link {
+    flex: 1;
+    /* REMOVER line-height: 25px; e height: 80px; daqui para usar o Flexbox */
+    /* Deixe o height e flex: 1; no CSS original se necessário para largura */
+    
+    /* Configuração Flexbox para centralizar conteúdo verticalmente e horizontalmente */
+    display: flex;
+    flex-flow: column wrap; /* Altera para column e impede quebra de linha */
+    justify-content: center; /* Centraliza verticalmente o ícone e o span */
+    align-items: center; /* Centraliza horizontalmente o conteúdo (ícone e span) */
+    
+    font-weight: bold;
+    color: var(--amarelo); /* Cor padrão para o link ativo (amarelo) */
+    padding: 5px 0; /* Adiciona um pequeno padding interno */
+}
+
+/* Mantém o estilo do ícone */
+.toolbar-inner > .link i {
+    font-size: 28px;
+    /* Adiciona um pequeno espaçamento entre o ícone e o texto */
+    margin-bottom: 2px;
+}
+
+/* Estilos para links não ativos */
+.toolbar-inner .link:not(.active) {
+    color: var(--preto);
+    font-weight: normal;
+}
+
+/* --- Media Query para Telas Maiores (Desktops/Tablets) --- */
+@media screen and (min-width: 768px) {
+    .form-section {
+        max-width: 1000px; /* Aumente este valor conforme o desejado, ex: 600px */
+        padding: 25px 35px; /* Adiciona mais preenchimento para um visual mais limpo */
+        margin-top: 30px; /* Puxa o formulário um pouco mais para cima, em direção à curva amarela */
+        margin-block-end: 20px;
+    }
+
+    /* Ajusta a largura dos botões dentro do formulário */
+    .form-section .button {
+        max-width: 100%; /* Garante que os botões (Adicionar Imagem, Adicionar Serviço) ocupem a nova largura */
+    }
+
+    /* Centraliza a página e remove o toolbar para uma experiência desktop típica (opcional) */
+    .page-content {
+        /* Remove o padding-bottom que compensava o menu fixo em mobile, se for desktop */
+        padding-bottom: 0px !important; 
+    }
+
+    .toolbar {
+        display: none; /* Oculta a barra de navegação inferior em desktop */
+    }
+    
+    .adicionar-servico-page {
+        background-color: var(--gelo); /* Dá um fundo claro à tela fora do contêiner centralizado */
+        height: 100vh; /* Garante que o fundo ocupe toda a altura */
+    }
+}

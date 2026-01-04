@@ -1,0 +1,120 @@
+/* --- Cores e Variáveis Específicas para esta tela --- */
+:root {
+    --header-height: 80px; /* Altura da seção amarela no topo */
+    --solucione-yellow: #ffc107;
+    --solucione-green: #38a538;
+    --solucione-dark: #000000;
+}
+
+label{
+    font-size: 1.2rem;
+    color: var(--solucione-dark);
+    margin-bottom: 5px;
+}
+
+/* Estilo para o botão de Acesso */
+.button-green {
+    background-color: var(--solucione-green);
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+}
+
+/* --- Estrutura do Cabeçalho Curvo --- */
+.header-curve {
+    position: relative;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--solucione-yellow);
+    
+    /* Cria o efeito curvo na parte de baixo */
+    border-bottom-left-radius: 0% 0%;
+    border-bottom-right-radius: 0% 0%;
+    
+    /* Centraliza o conteúdo (logo e título) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px; /* Espaço para o topo */
+}
+
+.header-curve .back-link {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    color: #000; /* Cor preta para o ícone da seta */
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.header-curve .header-logo img {
+    width: 200px; /* Ajuste o tamanho do logo */
+    height: auto;
+    margin-top: 170px; /* Puxa o logo ligeiramente para cima do limite */
+}
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --- Seção do Formulário --- */
+.login-content {
+    /* Desloca o conteúdo do formulário para o topo */
+    align-items: flex-start; 
+    padding-top: 0;
+}
+
+.form-section {
+    width: 100%;
+    margin-top: 170px; /* Puxa o formulário para dentro da curva amarela */
+    max-width: 320px;
+    padding: 0 20px;
+    z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para os campos de entrada (Framework7) */
+.list {
+    margin: 0;
+}
+
+.list ul {
+    background-color: transparent;
+}
+
+/* Estilo para o placeholder/label */
+.item-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Link Esqueceu a Senha */
+.forgot-password-link {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Link Cadastra-se */
+.cadastro-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.cadastro-link .cadastro-btn {
+    font-weight: bold;
+    color: var(--solucione-green); /* Cor de destaque para o link de cadastro */
+    max-width: 350px;
+}

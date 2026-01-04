@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Detalhes do Produto</title>
+
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <link rel="stylesheet" href="css/detalhes.css">
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+</head>
+<body>
+    
+    <div id="app">
+        <div class="view view-main">
+            <div class="page color-theme-blue">
+
+                <!--TOOLBAR INFERIOR-->
+                <div class="toolbar toolbar-bottom produto-toolbar">
+                    <div class="toolbar-inner">
+                        <div class="price-area">
+                            <span class="old-price">R$ 90,00</span>
+                            <span class="new-price">R$ 60,00</span>
+                        </div>
+                        <a href="/login/" class="button button-fill buy-btn">Comprar</a>
+                    </div>
+                </div>
+
+                <!-- CONTEÚDO-->
+                 <div class="page-content">
+                    <!--IMAGEM-->
+                    <div class="product-image">
+                        <div class="top-actions">
+                            <a href="/index/" class="icon-btn"><i class="ri-arrow-left-line"></i></a>
+                            <div class="right-icons">
+                                <a href="#" class="icon-btn"><i class="ri-heart-line"></i></a>
+                                <a href="#" class="icon-btn"><i class="ri-share-line"></i></a>
+                            </div>
+                        </div>
+                        <img src="img/produtos/cimento_solucione.png" alt="cimento">
+                    </div>
+
+                    <!-- CARD DO PRODUTO-->
+                     <div class="product-card">
+                        <div class="title-row">
+                            <h2>Nome do Produto</h2>
+                            <span class="promo">Promoção</span>
+                        </div>
+
+                        <div class="rating-row">
+                            <span><i class="mdi mdi-start"></i> 4.9</span>
+                            <span class="like"><i class="ri-thumb-up-fill"></i> 90%</span>
+                            <small>120 avaliações</small>
+                        </div>
+
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium sint consequatur quia amet ipsam eos reprehenderit.</p>
+                        <h4>Caraterísticas</h4>
+                        <table class="details-table">
+                            <tr><td>Cor</td><td>Azul</td></tr>
+                            <tr><td>Material</td><td>Cimento</td></tr>
+                            <tr><td>Peso</td><td>50kg</td></tr>
+                            <tr><td>Marca</td><td>Solucione</td></tr>
+                        </table>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/framework7-bundle.min.js"></script>
+    <script src="cordova.js"></script>
+</body>
+</html>

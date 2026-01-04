@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Solucione</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/favoritos.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+        <!-- Icones do Remix Icon-->
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+         <div data-name="favoritos" class="page color-theme-blue">
+              <!--Nav Bar-->
+                <div class="nav-top cart">
+                    <a href="/index/" class="link icon-only"><i class="mdi mdi-arrow-left"></i></a>
+                    <!--<strong>Favoritos</strong>-->
+                    <a href="#" class="link popover-open" data-popover=".popover-menu"><i class="mdi mdi-dots-horizontal"></i></a>
+                </div>
+            <!-- Initial Page, "data-name" contains page name -->
+           <div class="page-content profile-page">
+                <div class="profile-header">
+                    <img class="profile-avatar" src="img/germano.jpg" alt="foto do usuario">
+                    <p class="profile-name">Luiz Germano</p>
+                    <p class="profile-email">solucionelk@gmail.com</p>
+                    <a href="#" class="profile-edit-btn">Editar Perfil</a>
+                </div>
+                <ul class="profile-list">
+                    <li class="profile-list-item">
+                        <a href="#">
+                            <div><i class="mdi mdi-card-account-details"></i> Informações do usuário</div>
+                            <i class="mdi mdi-chevron-right arrow-icon"></i>
+                        </a>
+                    </li>
+                    <li class="profile-list-item">
+                        <a href="#">
+                            <div><i class="mdi mdi-heart"></i> Favoritos</div>
+                            <i class="mdi mdi-chevron-right arrow-icon"></i>
+                        </a>
+                    </li>
+                    <li class="profile-list-item">
+                        <a href="#">
+                            <div><i class="mdi mdi-map-marker"></i> Endereço</div>
+                            <i class="mdi mdi-chevron-right arrow-icon"></i>
+                        </a>
+                    </li>
+                    <li class="profile-list-item">
+                        <a href="#">
+                            <div><i class="mdi mdi-forum-outline"></i> Chat</div>
+                            <i class="mdi mdi-chevron-right arrow-icon"></i>
+                        </a>
+                    </li>                  
+                    <li class="profile-list-item">
+                        <a href="#">
+                            <div><i class="mdi mdi-history"></i> Histórico de Compras</div>
+                            <i class="mdi mdi-chevron-right arrow-icon"></i>
+                        </a>
+                    </li>
+                    <li class="profile-list-item">
+                        <a href="#">
+                            <div><i class="mdi mdi-lock-outline"></i> Segurança</div>
+                            <i class="mdi mdi-chevron-right arrow-icon"></i>
+                        </a>
+                    </li>
+                    <li class="profile-list-item">
+                        <a href="#">
+                            <div><i class="mdi mdi-cog-outline"></i> Configuração</div>
+                            <i class="mdi mdi-chevron-right arrow-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout-btn-container">
+                    <button class="logout-btn">
+                        <i class="mdi mdi-logout-variant"></i> Sair da Conta
+                    </button>
+                </div>
+           </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>

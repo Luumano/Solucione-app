@@ -1,0 +1,347 @@
+/* Definições de cores e variáveis */
+:root{
+    --branco: #ffffff;
+    --gelo: #f1f1f1;
+    --verde: #19c463; /* Usado no botão Acessar */
+    --preto: #2a2a2a;
+    --amarelo: #FED03E; /* Amarelo principal (mais escuro/alaranjado) */
+    
+    /* Cores derivadas */
+    --solucione-yellow-light: #f7d341; /* Amarelo Claro para ícones */
+    --solucione-orange: #ffaa38; /* Laranja para ícones */
+    --solucione-red: #f06262; /* Vermelho/Rosa para ícones */
+    --solucione-light-yellow-bg: #fce797; /* Amarelo bem claro para ícones */
+    --solucione-gray: #e0e0e0; /* Cinza para ícones */
+}
+
+a{
+    /* Cor padrão do link, usada no link "Ver todos" e Esqueceu a senha */
+    color: var(--amarelo); 
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.img-fluid{
+    max-width: 100%;
+}
+
+.block{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+/* ============================================== */
+/* 2. LAYOUT BASE E TOOLBAR (Barra Inferior) */
+/* ============================================== */
+
+.page-content-loja {
+    background: var(--branco);
+    /* Altura ajustada: 100vh - top-nav (60px) - toolbar (80px) */
+    height: calc(100vh - 60px - 80px); 
+    overflow-y: auto; 
+    padding-bottom: 20px; /* Adiciona um respiro no final da página */
+}
+
+.toolbar{
+    height: 80px;
+}
+
+.toolbar-inner{
+    background-color: var(--branco);
+    border-top: 1px solid var(--gelo);
+}
+
+.tab-link{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.toolbar-inner .link{ 
+    flex:1;
+    height: 80px; 
+    line-height: 25px; 
+    font-weight:bold;
+    color: var(--preto); /* Cor padrão dos ícones */
+    font-size: 13px;
+}
+
+.toolbar-inner .link:not(.active){
+    color: var(--preto);
+    font-weight:normal;
+}
+
+.toolbar-inner .link.active {
+    color: var(--amarelo); /* Cor do ícone ativo */
+    font-weight: bold;
+}
+
+.toolbar-inner > .link i{
+    font-size: 28px;
+}
+
+/* ============================================== */
+/* 3. TOP NAV (Barra Superior na Home do Usuário) */
+/* ============================================== */
+
+/* Cards de Itens/Produtos */
+#produtos{
+    width: 100%;
+    /* Garante que os itens comecem alinhados */
+    margin: 0;
+}
+
+/* ============================================== */
+/* 5. ESTILOS DE LOGIN EMPRESAS (Principal.png) */
+/* ============================================== */
+
+.login-content {
+    padding-top: 0;
+}
+
+/* Altura ajustada da seção amarela no topo (mais alta) */
+.header-curve {
+    position: relative;
+    width: 100%;
+    height: 35vh; /* Altura relativa para ocupar mais espaço */
+    background-color: var(--amarelo);
+    
+    /* Cria o efeito curvo na parte de baixo */
+    border-bottom-left-radius: 50% 15%;
+    border-bottom-right-radius: 50% 15%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px; 
+}
+
+.header-curve .back-link {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    color: #000; 
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.header-curve .header-logo {
+    margin-top: -30px; /* Puxa o logo para cima */
+    text-align: center;
+}
+
+.header-curve .header-logo img {
+    width: 100px; /* Ajuste o tamanho do logo */
+    height: auto;
+}
+
+.header-curve .page-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--preto);
+    margin: 10px 0 0 0;
+}
+
+/* Seção do Formulário */
+.form-section {
+    width: 100%;
+    max-width: 320px; /* Limita a largura do formulário e centraliza */
+    padding: 0 20px;
+    margin-top: -50px; /* Puxa o formulário para dentro da curva amarela */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+    position: relative; /* Garante que fique sobre o header */
+}
+
+/* Estilo para os campos de entrada (Removendo listas e usando classes de helper) */
+.list {
+    margin: 0;
+}
+
+/* Estilo dos campos de input simples sem F7 list/ul */
+.form-section label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--preto);
+    margin-top: 20px;
+}
+
+.form-section input[type="email"],
+.form-section input[type="password"] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--preto);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+/* Link Esqueceu a Senha */
+.forgot-password-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+/* Botão Acessar */
+.button-green {
+    background-color: var(--verde);
+    color: var(--branco) !important;
+    font-weight: bold;
+    margin-top: 25px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Link Cadastra-se */
+.cadastro-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.cadastro-link a {
+    color: var(--preto); /* Cor do link de cadastro em negrito */
+    font-weight: 800;
+}
+
+
+/* ============================================== */
+/* 6. ESTILOS DA HOME LOJA (Loja-home.png) */
+/* ============================================== */
+
+/* Altura do topo curvo na tela de loja (menor que o login) */
+.header-curve-top {
+    position: relative;
+    /*width: 100%;*/
+    height: 100px; 
+    background-color: var(--amarelo);
+    border-bottom-left-radius: 100% 100%;
+    border-bottom-right-radius: 100% 100%;
+    padding: 40px 20px 0 20px;
+}
+
+/* Ícones de navegação no topo */
+.header-curve-top .back-link-menu,
+.header-curve-top .notifications-link,
+.header-curve-top .panel-open {
+    position: absolute;
+    top: 40px;
+    color: var(--preto); 
+    font-size: 1.5rem;
+}
+
+.header-curve-top .back-link-menu { left: 20px; }
+.header-curve-top .notifications-link { right: 60px; } 
+.header-curve-top .panel-open { right: 20px; }
+
+
+/* Título Serviços Loja */
+.title-section-loja {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--preto);
+    padding: 0 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+/* --- Grid de Serviços (3x2) --- */
+.service-grid {
+    /*align-items: flex-start;*/ 
+    display: grid; 
+    /*padding: 0 15px;*/
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row .col-33 {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.service-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--preto);
+    width: 100%; 
+}
+
+.service-icon {
+    width: 70px; 
+    height: 70px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+    color: var(--branco); /* Cor padrão dos ícones internos */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    /*line-height: 1.1;*/
+    margin-bottom: 10px;
+}
+
+/* Cores dos Ícones de Serviço (Fundo) */
+.icon-yellow-bg { background-color: var(--solucione-yellow-light); } 
+.icon-orange-bg { background-color: var(--solucione-orange); } 
+.icon-red-bg { background-color: var(--solucione-red); }
+.icon-light-yellow-bg { 
+    background-color: var(--solucione-light-yellow-bg); 
+    color: var(--preto); /* Ícone escuro em fundo claro */
+}
+.icon-gray-bg { 
+    background-color: var(--solucione-gray); 
+    color: var(--preto); /* Ícone escuro em fundo claro */
+}
+
+
+/* Ajustes para ícones duplos (+ e x) */
+.service-add-icon {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: var(--verde);
+    color: var(--branco);
+    line-height: 1;
+}
+
+.service-remove-icon {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: var(--branco);
+    color: var(--solucione-red);
+    line-height: 1;
+}

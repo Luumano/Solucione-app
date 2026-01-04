@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Solucione</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/cadastrar_servico.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <!-- Icones do Remix Icon-->
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+        <div data-name="adicionar-servico" class="page adicionar-servico-page">
+            <div class="page-content login-content-servico">
+            <div class="header-curve-servico">
+                <a href="/engenheiro_home/" class="link back-link"><i class="ri-arrow-left-line"></i> Adicionar Serviço</a>
+                <a href="/notifications/" class="link notifications-link"><i class="ri-notification-3-line"></i></a>
+                <a href="#" class="link panel-open" data-panel="right"><i class="ri-menu-line"></i></a>
+            </div>
+
+            <!--Sessão de Login-->
+            <div class="form-section">
+                <div class="list no-hairlines-md">
+                    <ul>
+                        <h1>Dados do Serviço</h1>
+                        <!--Tipo do Projeto-->
+                        <label>Tipo do Projeto:</label>
+                        <li class="item-content item-input">
+                            <input type="text" class="item-inner" placeholder="Digite o tipo do projeto">  
+                        </li>
+                        <!--Localização-->
+                        <label>Localização:</label>
+                        <li class="item-content item-input">
+                            <input type="text" class="item-inner" placeholder="Digite sua localização">
+                        </li>
+                        <label>Serviço:</label>
+                        <li class="item-content item-input">
+                            <input type="text" class="item-inner" placeholder="Digite sua localização">
+                        </li>
+                        <!--Preço-->
+                        <label>Preço:</label>
+                        <li class="item-content item-input">
+                            <input type="text" class="item-inner" placeholder="Digite o valor">
+                        </li>
+                            <a href="#" class="button button-fill button-large button-green"><i class="ri-image-add-line"> Adicionar Imagem</i></a>
+
+                        <h1>Dados do Engenheiro</h1>
+                        <!--Nome-->
+                        <label>Nome:</label>
+                        <li class="item-content item-input">
+                            <input type="text" class="item-inner" placeholder="Digite o seu Nome">
+                        </li>
+                        <!--Número do CREA-->
+                        <label>Número do CREA:</label>
+                        <li class="item-content item-input">
+                            <input type="number" class="item-inner" placeholder="Digite o número do CREA">
+                        </li>
+                        <!--Preço-->
+                        <label>Telefone:</label>
+                        <li class="item-content item-input">
+                            <input type="text" class="item-inner" placeholder="Digite o telefone para contato">
+                        </li>
+                    </ul>
+                </div>
+                <!--Botão para acessar o sistema-->
+                <a href="/loja_home/" class="button button-fill button-large button-green">Adicionar Serviço</a>
+                <a href="#" class="button button-fill button-large button-yellow">Salvar Rascunho</a>
+            </div>
+                 <!-- TAB BAR-->
+            <div id="menuPrincipal" class="toolbar toolbar-bottom">
+                <div class="toolbar-inner display-flex">
+                    <a href="/index/" class="tab-link link active">
+                        <i class="ri-home-5-line"></i>
+                        <span>Inicio</span>
+                    </a>
+                    <a href="/link2/" class="tab-link link">
+                        <i class="ri-search-2-line"></i>
+                        <span>Buscar</span>
+                    </a>
+                    <a href="/link4/" class="tab-link link">
+                        <i class="ri-chat-4-line"></i>
+                        <span>Chat</span>
+                    </a>
+                    <a href="/link5/" class="tab-link link">
+                        <i class="ri-user-line"></i>
+                        <span>Conta</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+/* Definições de cores */
+:root{
+    --branco: #ffffff;
+    --gelo: #f1f1f1;
+    --verde: #19c463;
+    --preto: #2a2a2a;
+    --amarelo: #FED03E;
+}
+
+/* IMAGEM */
+.product-image{
+    background-color: var(--gelo);
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-image img{
+    max-width: 300px;
+}
+
+/* Botões topo */
+.top-actions{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.right-icons{
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--preto);
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+}
+
+/*CARD*/
+.product-card{
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 25px 25px 0 0;
+    padding: 20px;
+}
+
+/*Titulo*/
+.title-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-row h2{
+    margin: 0;
+}
+
+.promo{
+    background: var(--amarelo);
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/*Avaliações*/
+.rating-row{
+    display: flex;
+    gap: 12px;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.rating-row i{
+    color: var(--amarelo);
+}
+
+.rating-row .like i{
+    color: var(--verde);
+}
+
+/*Descrição*/
+.description{
+    color: #555;
+    line-height: 1.5;
+}
+
+/*tabela*/
+.details-table{
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.details-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== TOOLBAR ===== */
+.produto-toolbar {
+  background: #fff;
+  box-shadow: 0 -2px 10px rgba(0,0,0,.1);
+}
+
+.price-area {
+  display: flex;
+  right: 40px;
+  flex-direction: column;
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-left: 40px;
+  color: gray;
+}
+
+.new-price {
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buy-btn {
+  background: var(--amarelo);
+  color: #000;
+  font-weight: bold;
+  border-radius: 14px;
+  height: 48px;
+  right: 50px;
+  
+}
+
+/* ===== AJUSTE FUNDAMENTAL ===== */
+.page-with-toolbar-bottom .page-content {
+  padding-bottom: 100px;
+}
+
+.page {
+  background: #fff;
+  z-index: 1;
+}
+
+.page-current {
+  z-index: 10;
+}
+
+.page-previous {
+  opacity: 1 !important;
+  pointer-events: none;
+}

@@ -1,0 +1,130 @@
+/* Definições de cores */
+:root{
+    --branco: #ffffff;
+    --gelo: #f1f1f1;
+    --zinza: #f1f1f1af;
+    --verde: #19c463;
+    --preto: #2a2a2a;
+    --amarelo: #FED03E;
+    --vermelho: #680202;
+}
+
+/* Estilo div principal do perfil*/
+.profile-page{
+    background-color: var(--gelo);
+    padding-bottom: 20px;
+}
+
+/*Estilo da Foto*/
+.profile-header{
+    background-color: var(--branco);
+    padding: 30px 20px 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.profile-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border: 4px solid var(--amarelo);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.01);
+}
+
+.profile-name{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--preto);
+    margin: 0;
+}
+
+.profile-email{
+    font-size: 0.9rem;
+    color: var(--preto);
+    opacity: 0.7;
+    margin: 0;
+    font-weight: 500;
+}
+
+.profile-edit-btn{
+    margin-top: 10px;
+    color: var(--verde);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* Link e configurações */
+.profile-list{
+    background-color: var(--branco);
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.profile-list-item{
+    border-bottom: 1px solid var(--gelo);
+}
+
+.profile-list-item:last-child{
+    border-bottom: none;
+}
+
+.profile-list-item a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: var(--preto);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.profile-list-item a:hover{
+    background-color: var(--zinza);
+}
+
+/*Estilo para os icones do lado esquerdo*/
+.profile-list-item i.mdi{
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--amarelo);
+}
+
+.profile-list-item .arrow-icon{
+    font-size: 1.2rem;
+    color: var(--preto);
+    opacity: 0.5;
+}
+
+/*Estilo do Botão Logout */
+.logout-btn-container{
+    padding: 20px;
+    text-align: center;
+}
+
+.logout-btn{
+    width: 100%;
+    max-width: 300px;
+    height: 45px;
+    background-color: var(--vermelho);
+    color: var(--branco) !important;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.logout-btn:hover{
+    background-color: #410000;
+}

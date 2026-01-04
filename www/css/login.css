@@ -1,0 +1,99 @@
+/* --- Cores e Variáveis --- */
+:root {
+    --f7-color-yellow: #ffc107; /* Amarelo da sua marca */
+    --f7-color-dark: #212529;   /* Cor escura (Texto e botões) */
+}
+
+/* Substitui a cor padrão do Framework7 para o botão Amarelo */
+.button-yellow {
+    background-color: var(--f7-color-yellow);
+    color: var(--f7-color-dark) !important;
+    font-weight: bold;
+}
+
+.button-dark {
+    background-color: var(--f7-color-dark);
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* --- Estrutura da Página de Boas-Vindas --- */
+.welcome-page .page-content {
+    /* Garante que o conteúdo ocupe toda a altura e centraliza os blocos */
+    justify-content: space-around !important;
+    padding: 30px 20px;
+}
+
+.welcome-header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+}
+
+.logo-container {
+    margin: 20px 0;
+}
+
+.app-logo {
+    width: 250px; /* Ajuste o tamanho do seu logo */
+    height: auto;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.app-subtitle {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin: 5px 0;
+    letter-spacing: 0.5px;
+}
+
+/* --- Botões e Separador --- */
+.buttons-section {
+    width: 100%;
+    max-width: 350px; /* Largura máxima para centralizar botões em telas maiores */
+}
+
+.button-large {
+    height: 50px; /* Altura padrão para botões grandes no F7 */
+    line-height: 50px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #dee2e6;
+    margin: 0 10px;
+}
+
+/* --- Footer --- */
+.login-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.login-link {
+    color: var(--f7-color-dark);
+    font-weight: bold;
+    text-decoration: none;
+}

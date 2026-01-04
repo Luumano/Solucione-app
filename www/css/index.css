@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html, body, #app, .view, .page{
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Definições de cores */
+:root{
+    --branco: #ffffff;
+    --gelo: #f1f1f1;
+    --verde: #19c463;
+    --preto: #2a2a2a;
+    --amarelo: #FED03E;
+}
+
+.toolbar{
+    height: 80px;
+}
+
+.tab-link{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.toolbar-inner .link{      
+    flex:1;
+    height: 80px;   
+    line-height: 25px; 
+    font-weight:bold;
+    color: var(--amarelo);      
+}
+
+/* Estilos para a barra de ferramentas */
+.toolbar-inner{
+    background-color: var(--branco);
+    border-top: 1px solid var(--gelo);
+}
+
+.toolbar-inner .link:not(.active){
+    color: var(--preto);
+    font-weight:normal;
+}
+
+.toolbar-inner > .link i{
+    font-size: 28px;
+}
+
+/* Estilos para a barra superior */
+.top-nav{
+    width: 100%;
+    height: 60px;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--gelo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-logo{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5%;
+    color: var(--preto);
+}
+
+.title-logo span{
+    color: var(--amarelo);
+    font-weight: 600;
+}
+
+.logo{
+    height: 40px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.btn-cart{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: var(--branco);
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    border-radius: 50%;
+    border: 1px solid var(--gelo);
+    font-size: 24px;
+    color: var(--preto);
+}
+
+.btn-cart::before{
+    content: attr(data-count);
+    width: 17px;
+    height: 17px;
+    background: var(--amarelo);
+    color: var(--preto);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    margin-right: 5%;
+}
+
+.btn-cart[data-count="0"]::before{
+    display: none;
+}
+
+a{
+    color: var(--amarelo);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Estilos para formulários de pesquisa*/
+form {
+    padding-top: 10px;
+    background: var(--branco);
+    padding-bottom: 20px;
+    position: relative;
+}
+
+input[type="text"]{
+    width: 90%;
+    background: var(--gelo);
+    height: 45px;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+::placeholder{
+    color: #b3afaf;
+}
+
+.icone-busca{
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    font-size: 27px;
+    padding: 13px;
+}
+
+.page-content{
+    background: var(--branco);
+}
+
+/* Swiper styles */
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+/* Imagens responsivas */
+.img-fluid{
+    max-width: 100%;
+}
+
+.block{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.filter-btn{
+    width: 100%;
+    height: 35px;
+    background: none;
+    border: 2px solid var(--preto);
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    color: var(--preto);
+}
+
+ /* Estilos para os cards de produtos */
+.item-card{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: auto;
+    border: 1px solid var(--gelo);
+    flex: 45%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    background: var(--gelo);
+}
+
+.img-container img{
+    max-width: 150px;
+    object-fit: cover;
+}   
+
+.nome-rating{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px; 
+}
+
+.color-gray{
+    color: gray;
+}
+
+.mdi-star{
+    color: orange;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+.price{
+    font-size: 20px;
+}
+
+#produtos{
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .item-card{
+        flex: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .item-card{
+        flex: 20%
+    }
+}
+
+.page {
+  overflow: hidden;
+}
+
+.page-content {
+  overflow-y: auto;
+  height: 100%;
+}
