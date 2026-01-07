@@ -24,16 +24,12 @@ label{
 }
 
 /* --- Estrutura do Cabeçalho Curvo --- */
-.header-curve {
+.header-curve-login {
     position: relative;
     width: 100%;
     height: var(--header-height);
     background-color: var(--solucione-yellow);
-    
-    /* Cria o efeito curvo na parte de baixo */
-    border-bottom-left-radius: 0% 0%;
-    border-bottom-right-radius: 0% 0%;
-    
+
     /* Centraliza o conteúdo (logo e título) */
     display: flex;
     flex-direction: column;
@@ -42,22 +38,22 @@ label{
     padding-top: 30px; /* Espaço para o topo */
 }
 
-.header-curve .back-link {
+.header-curve-login .back-link {
     position: absolute;
-    top: 40px;
-    left: 20px;
+    top: 0px;
+    left: 0px;
     color: #000; /* Cor preta para o ícone da seta */
     font-size: 1.5rem;
     z-index: 10;
 }
 
-.header-curve .header-logo img {
+.header-curve-login .header-logo-login img {
     width: 200px; /* Ajuste o tamanho do logo */
     height: auto;
     margin-top: 170px; /* Puxa o logo ligeiramente para cima do limite */
 }
 
-.page-title {
+.page-title-login {
     font-size: 1.8rem;
     font-weight: bold;
     color: #000;
@@ -67,15 +63,13 @@ label{
     justify-content: center;
 }
 
-
 /* --- Seção do Formulário --- */
 .login-content {
-    /* Desloca o conteúdo do formulário para o topo */
     align-items: flex-start; 
     padding-top: 0;
 }
 
-.form-section {
+.form-section-login {
     width: 100%;
     margin-top: 170px; /* Puxa o formulário para dentro da curva amarela */
     max-width: 320px;
@@ -95,9 +89,9 @@ label{
 }
 
 /* Estilo para o placeholder/label */
-.item-label {
-    font-size: 0.9rem;
-    color: #6c757d;
+.item-label-login {
+    font-size: 1.2rem;
+    color: #111d27;
 }
 
 /* Link Esqueceu a Senha */

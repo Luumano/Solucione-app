@@ -189,78 +189,28 @@ var app = new Framework7({
           },
         }
       },
-    {
-      path: '/carrinho_compra/',
-      url: 'carrinho_compra.html',
-      options: {
-        transition: 'f7-push',
+      {
+        path: '/carrinho_compra/',
+        url: 'carrinho_compra.html',
+        options: {
+          transition: 'f7-push',
+        },
+
+        on: {
+          pageBeforeIn: function () {
+            // Esconde o menu inferior
+            $('#menuPrincipal').hide('fast');
+          },
+
+          pageBeforeOut: function () {
+            // Mostra o menu ao sair
+            $('#menuPrincipal').show('fast');
+          },
+          pageInit: function (event, page) {
+
+          },
+        }
       },
-
-      on: {
-        pageBeforeIn: function () {
-          // Esconde o menu inferior
-          $('#menuPrincipal').hide('fast');
-        },
-
-        pageBeforeOut: function () {
-          // Mostra o menu ao sair
-          $('#menuPrincipal').show('fast');
-        },
-        pageInit: function (event, page) {
-
-  const produto = JSON.parse(localStorage.getItem('carrinho'));
-
-  if (!produto) {
-    app.dialog.alert('Carrinho vazio!');
-    app.views.main.router.back();
-    return;
-  }
-
-  const img = page.el.querySelector('#cart-img');
-  const nome = page.el.querySelector('#cart-nome');
-  const preco = page.el.querySelector('#cart-preco');
-  const totalSpan = page.el.querySelector('#total');
-
-  img.src = produto.imagem;
-  nome.textContent = produto.nome;
-  preco.textContent = `R$ ${produto.preco.toFixed(2).replace('.', ',')}`;
-
-  // Inicializa Stepper corretamente
-  const stepper = app.stepper.create({
-    el: page.el.querySelector('#stepperQtd'),
-    min: 1,
-    value: 1,
-    on: {
-      change(stepper) {
-        const total = stepper.value * produto.preco;
-        totalSpan.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
-      }
-    }
-  });
-
-  // Total inicial
-  totalSpan.textContent = `R$ ${produto.preco.toFixed(2).replace('.', ',')}`;
-
-  // Limpar carrinho
-  $$('#limparCarrinho').on('click', function () {
-    app.dialog.confirm(
-      'Deseja realmente limpar o carrinho?',
-      function () {
-        localStorage.removeItem('carrinho');
-        app.views.main.router.back();
-      }
-    );
-  });
-
-  // Finalizar pedido
-  $$('#finalizarPedido').on('click', function () {
-    app.dialog.alert('Pedido finalizado com sucesso!');
-    localStorage.removeItem('carrinho');
-  });
-},
-
-}
-    },
       {
         path: '/login/',
         url: 'login.html',

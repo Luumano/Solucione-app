@@ -109,11 +109,6 @@ a{
     width: 100%;
     height: 35vh; /* Altura relativa para ocupar mais espaço */
     background-color: var(--amarelo);
-    
-    /* Cria o efeito curvo na parte de baixo */
-    border-bottom-left-radius: 50% 15%;
-    border-bottom-right-radius: 50% 15%;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
