@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#FED03E">
+    <title>Carrinho de Compra</title>
+    <!--FRAMEWOR7-->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!--ICONES-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+    <!--CSS DO APP-->
+    <link rel="stylesheet" href="css/carrinho_compra.css">
+</head>
+<body>
+    <div id="app">
+        <div class="view view-main">
+            <div class="page" data-name="carrinho_compra">
+                <!--NAVBAR-->
+                <div class="navbar">
+                    <div class="navbar-inner" style="background: #FED03E;">
+                        <div class="left">
+                            <a href="#" class="link back"><i class="mdi mdi-arrow-left"></i></a>
+                        </div>
+                        <div class="title">Carrinho de Compra</div>
+                        <div class="right">
+                            <a href="#" class="link"><i class="mdi mdi-menu"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CONTEÚDO-->
+                <div class="page-content">
+                    <div class="block">
+                        <a href="/index/" class="button button-outline"><i class="mdi mdi-cart"></i> Continuar Comprando</a>
+                    </div>
+                    <div class="block text-align-right">
+                        <a href="#" class="text-color-red" id="limparCarrinho"> Limpar Carrinho <i class="mdi mdi-delete"></i></a>
+                    </div>
+                    <!--PRODUTO-->
+                    <div class="block item-card">
+                        <div class="row">
+                            <div class="col-30">
+                                <img id="cart-img" src="" class="img-fluid">
+                            </div>
+                            <div class="col-70">
+                                <p id="cart-nome" class="bold"></p>
+                                <p id="cart-preco"></p>
+                                <div  class="stepper stepper-small stepper-init" id="stepperQtd">
+                                    <div class="stepper-button-minus"></div>
+                                    <div class="stepper-input-wrap">
+                                        <input type="number" value="1" min="1">
+                                    </div>
+                                    <div class="stepper-button-plus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--TOTAL-->
+                        <div class="block">
+                            <strong>Total:</strong>
+                            <span id="total"></span>
+                        </div>
+                    </div>
+                    <!--TIPO DE ENTREGA-->
+                    <div class="block">
+                        <p><strong>Tipo de Emtrega</strong></p>
+                        <label class="checkbox">
+                            <input type="radio" name="entrega">
+                            <i class="icon-checkbox"></i> Entregar
+                        </label>
+                        <label class="checkbox">
+                            <input type="radio" name="entrega">
+                            <i class="icon-checkbox"></i> Retirar no Local
+                        </label>
+                    </div>
+                    <!--MEIOS DE PAGAMENTO-->
+                    <div class="block">
+                        <p><strong>Formas de Pagamento</strong></p>
+                        <div class="row">
+                            <div class="col">
+                                <button class="button button-outline">Pix</button>
+                            </div>
+                            <div class="col">
+                                <button class="button button-outline">Cartão</button>
+                            </div>
+                            <div class="col">
+                                <button class="button button-outline">Dinheiro</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--FINALIZAR-->
+                    <div class="block">
+                        <button class="button button-fill color-green button-large" id="finalizarPedido">Finalizar Pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="lib/framework7-bundle.min.js"></script>
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <!--ROTAS DO APP-->
+    <script src="js/routes.js"></script>
+    <!--CORDOVA-->
+    <script src="cordova.js"></script>
+</body>
+</html>
